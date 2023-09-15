@@ -1,4 +1,3 @@
-/* nejsme vcerejsi, pouzivame moderni box model */
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
@@ -7,11 +6,95 @@ body {
 	font-size: 14px;
 }
 
-/* ---------------------------------------------------- */
+.woman {
+	text-align: center;
+	border-radius: 5%;
+	margin: 30px 10px;
+	padding: 20px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
 
-/*
-Breakpointy
-Mobil   0 - 539px
-Tablet  540px - 959px (čti jako 540px a víc)
-PC      960px a víc
-*/
+img {
+	width: 100%;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+
+h1 {
+	text-align: center;
+}
+
+body {
+	margin: 0;
+}
+
+@media screen and (min-width: 540px) {
+	.team {
+		display: flex;
+		gap: 30px;
+		margin: 10px;
+		flex-wrap: wrap;
+	}
+
+	.woman {
+		display: flex;
+		margin: 0px;
+		padding: 0px;
+		flex-basis: 50%;
+	}
+
+	.text {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		margin: 0 20px;
+	}
+
+	img {
+		display: flex;
+		width: 80px;
+		height: 80px;
+		margin: auto 10px;
+	}
+
+	h2 {
+		margin: 20px 0 0 0;
+	}
+
+	.team__wrapper {
+		display: flex;
+		gap: 30px;
+	}
+}
+
+
+@media screen and (min-width: 960px) {
+	.team {
+		display: flex;
+		gap: 30px;
+		flex-wrap: nowrap;
+	}
+	
+	.woman {
+		display: block;
+		margin: 0px;
+		padding: 20px;
+	}
+
+	.text {
+		display: block;
+		text-align: center;
+	}
+
+	img {
+		margin: 10px auto;
+		width: 120px;
+		height: 120px;
+	}
+
+	.team__wrapper {
+		display: flex;
+	}
+}
+
